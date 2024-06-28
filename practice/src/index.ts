@@ -1,139 +1,39 @@
 // const obj = {
-//   "foo": 123,
-//   "foo bar": -500,
-//   '↑↓↑': "",
-// };
-
-// const name = input ? input : "名無し",
-
-// const user = {
-//   name,
-//   age: 20,
-// };
-
-// const obj = {
-//   1: "one",
-//   2.05: "two point o five",
-// };
-
-// const propName = "foo";
-// const obj = {
-//   [propName]: 123,
-// };
-
-// console.log(obj.foo);
-
-// const user = {
-//   name: "uhyo",
-//   age: 25,
-// };
-
-// user.age = 26;
-// console.log(user.age);
-
-// import { createInterface } from "readline";
-
-// const rl = createInterface({
-//   input: process.stdin,
-//   output: process.stdout,
-// });
-
-// const messages = {
-//   good: "0以上の数値が入力されました！",
-//   bad: "負の数値を入力しないでください！",
-// };
-
-// rl.question("数値を入力してください:", (line) => {
-//   const num = Number(line);
-//   console.log(messages[num >= 0 ? "good" : "bad"]);
-//   rl.close();
-// });
-
-// const user = {
-//   name: "uhyo",
-//   age: 25,
-// };
-// console.log(user.name);
-
-// user.name = "John Smith";
-// console.log(user.name);
-
-// const obj1 = {
-//   bar: 456,
-//   baz: 789,
-// };
-
-// const obj2 = {
-//   foo: 123,
-//   ...obj1,
-// };
-
-// console.log(obj2);
-
-// const obj1 = {
-//   foo: 123,
-//   bar: 456,
-//   baz: 789,
-// };
-
-// const obj2 = {
-//   ...obj1,
-//   foo: -9999,
-// };
-
-// console.log(obj2);
-
-// const obj1 = {
-//   foo: 123,
-//   bar: 456,
-// };
-
-// const obj2 = {
-//   bar: -999,
-//   baz: -9999,
-// };
-
-// const obj3 = {
-//   ...obj1,
-//   ...obj2,
-// };
-
-// console.log(obj3);
-
-// const foo = { num: 1234 };
-// const bar = foo;
-// console.log(bar.num);
-// bar.num = 0;
-// console.log(foo.num);
-
-// const foo = { num: 1234 };
-// const bar = { ...foo };
-// console.log(bar.num);
-// bar.num = 0;
-// console.log(foo.num);
-
-// const foo = { obj:{ num: 1234 } };
-// const bar = { ...foo };
-// bar.obj.num = 0;
-// console.log(foo.obj.num);
-
-// const foo = { num: 1234 };
-// const bar = foo;
-// const baz = { num: 1234 };
-
-// console.log(foo === bar);
-// console.log(foo === baz);
-
-// const obj: {
-//   foo: number;
-//   bar: string;
-// } = {
 //   foo: 123,
 //   bar: "Hello, world!"
 // };
 
-const obj: {
-  "foo bar": number;
-} = {
-  "foo bar": 123,
+// console.log(obj.foo);
+// console.log(obj.bar);
+
+// const name = input ? input : "名無し";
+// const user = {
+// name: name,
+// age: 20,
+// };
+
+// type FooBarObj = {
+//   foo: number;
+//   bar: string;
+// };
+// const obj: FooBarObj = {
+//     foo: 123,
+//     bar: "Hello, world!"
+// };
+
+// type UserId = string;
+// const id: UserId = "uhyo";
+
+// type FooObj = { foo: number };
+// type Myobj = FooObj;
+
+// const obj: Myobj = { foo: 0};
+
+interface FooBarObj {
+  foo: number;
+  bar: string;
+}
+const obj: FooBarObj = {
+    foo: 0,
+    bar: "string"
 };
