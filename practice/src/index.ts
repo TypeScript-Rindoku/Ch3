@@ -56,18 +56,66 @@
 //   [propName]: 123
 // };
 // console.log(obj.foo);
-type Myobj = {
-  foo: boolean;
-  bar: boolean;
-  baz?: number;
- };
-const obj: Myobj = { foo: false, bar: true };
-const obj2: Myobj = { foo: true, bar: false, baz: 1234 };
+// type Myobj = {
+//   foo: boolean;
+//   bar: boolean;
+//   baz?: number;
+//  };
+// const obj: Myobj = { foo: false, bar: true };
+// const obj2: Myobj = { foo: true, bar: false, baz: 1234 };
 
-// console.log(obj.baz);
-// console.log(obj2.baz);
-// console.log(obj2.baz * 1000);
+// // console.log(obj.baz);
+// // console.log(obj2.baz);
+// // console.log(obj2.baz * 1000);
 
-if (obj2.baz !== undefined) {
-  console.log(obj2.baz * 1000);
+// if (obj2.baz !== undefined) {
+//   console.log(obj2.baz * 1000);
+// }
+
+// type Myobj = {
+//   readonly foo: number;
+// }
+// const obj: Myobj = { foo: 123 };
+// obj.foo = 0;
+
+// const num: number = 0;
+// type T = typeof num;
+// const foo: T = 123;
+
+// const obj = {
+//   foo: 123,
+//   bar: "hi"
+// };
+
+// type T = typeof obj;
+// const obj2: T = {
+//   foo: -50,
+//   bar: ""
+// };
+
+// const res: typeof foo = typeof bar;
+
+// type User = { name:string; age: number };
+
+// const commandList = ["attack", "defend", "run"] as const;
+// type Command = typeof commandList[number];
+
+// type Command = "attack" | "defend" | "run";
+// const commandList: Command[] = ["attack", "defend", "run"];
+
+type FooBar = {
+  foo: string;
+  bar: number;
 }
+type FooBarBaz = {
+  foo: string;
+  bar: number;
+  baz: boolean;
+}
+
+const obj: FooBarBaz = {
+  foo: "hi",
+  bar: 1,
+  baz: false
+};
+const obj2: FooBar = obj;
