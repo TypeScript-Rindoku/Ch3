@@ -120,31 +120,105 @@
 // };
 // const obj2: FooBar = obj;
 
-type Animal = {
-  age: number;
-};
-type Human = {
-  age: number;
+// type Animal = {
+//   age: number;
+// };
+// type Human = {
+//   age: number;
+//   name: string;
+// };
+
+// type AnimalFamily = {
+//   familyName: string;
+//   mother: Animal;
+//   father: Animal;
+//   child: Animal;
+// };
+// type HumanFamily = {
+//   familyName: string;
+//   mother: Human;
+//   father: Human;
+//   child: Human;
+// };
+
+// type User = { name: string; age: number };
+// const obj = {
+//   name: "Uhyo",
+//   age: 26,
+//   tellNumber: "09012345678",
+// };
+// const u: User = obj;
+
+// type User<T> = {
+//   name: string;
+//   child: T;
+// };
+
+// type User<T> = {
+//   name: string;
+//   child: T;
+// };
+
+// const hoge1: User<T> = {
+//   name: "Uhyo",
+//   child: 26,
+// };
+
+// const hoge2 = {
+//   name: "Uhyo",
+//   chile: true,
+// };
+
+// type Family<Parent, Child> = {
+//   mother: Parent;
+//   father: Parent;
+//   child: Child;
+// };
+
+// const obj: Family<number, string> = {
+//   mother: 0,
+//   father: 100,
+//   child: "1000",
+// };
+
+// const obj2: Family = { // 型引数が足りない
+//   mother: 0,
+//   father: 100,
+//   child: "1000",
+// }
+
+// const obj3: Family<boolean, number> = {
+//   mother: true,
+//   father: false,
+//   child: 1000,
+// };
+
+type HasName = {
   name: string;
 };
-
-type AnimalFamily = {
-  familyName: string;
-  mother: Animal;
-  father: Animal;
-  child: Animal;
-};
-type HumanFamily = {
-  familyName: string;
-  mother: Human;
-  father: Human;
-  child: Human;
+type Family<Parent extends HasName, Child extends HasName> = {
+  mother: Parent;
+  father: Parent;
+  child: Child;
 };
 
-type User = { name: string; age: number };
-const obj = {
-  name: "Uhyo",
-  age: 26,
-  tellNumber: "09012345678",
+type T1 = Family< {name: string}, {name: string}>;
+
+type Animal = {
+  name: string;
 };
-const u: User = obj;
+type Human = {
+  name: string;
+  age: number;
+};
+
+type T2 = Family<Animal, Human>;
+
+type Family2<Parent extends HasName, Child extends Parent> = {
+  mother: Parent;
+  father: Parent;
+  child: Child;
+};
+
+type S = Family2<Animal, Human>;
+// type T = Family2<Human, Animal>;
