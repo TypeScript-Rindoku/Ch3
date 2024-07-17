@@ -80,11 +80,60 @@
 
 // console.log(arr2);
 
-const arr = [0, 123, -456 * 100];
+// const arr = [0, 123, -456 * 100];
 // console.log(arr[0]);
 // console.log(arr[1]);
 // console.log(arr);
 
-arr[1] = 5400;
-console.log(arr);
+// arr[1] = 5400;
+// console.log(arr);
 // arr = [1, 2, 345, 67];
+
+// const arr: number[] = [1, 10, 100];
+// const arr2: string[] = [123, -456];
+
+// const arr1: boolean[] = [false, true];
+
+// const arr2: Array<{
+//   name: string;
+// }> = [
+//   { name: "山田さん"},
+//   { name: "田中さん"},
+//   { name: "鈴木さん"}
+// ];
+
+// const arr = [1, 10, 100];
+// const arr3: (number | string | boolean)[] = [100, "文字列", false];
+
+// const arr: readonly number[] = [1, 10, 100];
+
+// arr[1] = -500;
+
+// const arr = [1, 10, 100];
+// arr.push(1000);
+// console.log(arr);
+
+// arr.push("foobar");
+
+// const arr: readonly number[] = [1, 10, 100];
+// arr.push(1000);
+
+// const arr = [1, 10, 100];
+// console.log(arr.indexOf(100));
+// console.log(arr.indexOf(50));
+// console.log(arr.indexOf(1));
+// console.log(arr.includes(50));
+
+// console.log(arr.includes("foobar"));
+
+// const arr = [1, 10, 100];
+// console.log(arr.length);
+// arr.push(1000);
+// console.log(arr.length);
+
+const arr: (string | number)[] = ["hoge", "fuga"];
+arr.push(1000);
+console.log(arr);
+
+arr.push("foobar");
+console.log(arr);
