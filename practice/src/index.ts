@@ -131,9 +131,21 @@
 // arr.push(1000);
 // console.log(arr.length);
 
-const arr: (string | number)[] = ["hoge", "fuga"];
-arr.push(1000);
-console.log(arr);
+// const arr: (string | number)[] = ["hoge", "fuga"];
+// arr.push(1000);
+// console.log(arr);
 
-arr.push("foobar");
-console.log(arr);
+// arr.push("foobar");
+// console.log(arr);
+
+// // [].includes
+[].indexOf
+// [1, 10, 100].length
+
+const arr = ["hoge", "fuga"];
+for (let elm of arr) {
+  for (let elm2 of elm){
+    console.log(elm2);
+  }
+}
+// console.log(arr);
