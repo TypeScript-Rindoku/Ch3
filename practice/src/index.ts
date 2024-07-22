@@ -142,10 +142,46 @@
 [].indexOf
 // [1, 10, 100].length
 
-const arr = ["hoge", "fuga"];
-for (let elm of arr) {
-  for (let elm2 of elm){
-    console.log(elm2);
-  }
-}
+// const arr = ["hoge", "fuga"];
+// for (let elm of arr) {
+//   for (let elm2 of elm){
+//     console.log(elm2);
+//   }
+// }
 // console.log(arr);
+
+// let tuple: [string, number, string?] = ["foo", 0, "uhyo"];
+// tuple = ["aiueo", -555]
+// console.log(tuple[0]);
+
+// const str = tuple[0];
+// const num = tuple[1];
+// const nothing = tuple[2];
+
+// type User = [name: string, age: number];
+// const uhyo: User = ["uhyo", 26];
+// console.log(uhyo[1]);
+
+// const arr = [1, 10, 100];
+// const num: number = arr[100];
+// console.log(num);
+
+// const { foo, bar } = obj;
+
+// const foo = obj.foo;
+// const bar = obj.bar;
+
+// const {
+//   foo,
+//   bar: barVar,
+//   "foo bar": foobar
+//  } = obj;
+
+//  const obj = {
+//   str: "hello, world!",
+//   num: 1234
+//  };
+
+//  const {
+//   foo
+//  } = obj;
