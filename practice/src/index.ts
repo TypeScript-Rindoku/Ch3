@@ -185,3 +185,99 @@
 //  const {
 //   foo
 //  } = obj;
+
+// const nested = {
+//   num: 123,
+//   obj: {
+//     foo: "hello",
+//     bar: "world"
+//   }
+// }
+
+// const { num, obj: { foo } } = nested;
+
+// console.log(num);
+// console.log(foo);
+
+// const arr = [1, 2, 4, 8, 16, 32];
+
+// const [first, second, third] = arr;
+// console.log(first);
+// console.log(second);
+// console.log(third);
+
+// const first = arr[0];
+// const second = arr[1];
+// const third = arr[2];
+
+// const [{ name }] = arr;
+
+// const arr = [1, 2, 4, 8, 16, 32];
+
+// const [, foo, , bar, , baz] = arr;
+// console.log(foo);
+// console.log(bar);
+// console.log(baz);
+
+// const tuple: [string, number] = ["uhyo", 26];
+// const [myName, age] = tuple;
+
+// console.log(myName);
+// console.log(age);
+
+// const obj = {
+//   arr: [1, 2, 4, 8, 16, 32]
+// };
+// const { arr: [foo] } = obj;
+// console.log(foo);
+
+// const obj = {
+//   arr: [
+//     { name: 'Taro', age: 20 },
+//     { name: 'Bob', age: 30 },
+//   ],
+// };
+
+// const { arr: [foo] } = obj;
+
+// console.log(foo);
+
+// const { arr: [{ name }]} = obj;
+
+// console.log(name);
+
+// type Obj = { foo?: number};
+// const obj1: Obj = {};
+// const obj2: Obj = { foo: -1234 };
+
+// const { foo = 500 } = obj1;
+// console.log(foo);
+
+// const { foo: bar = 500 } = obj2;
+// console.log(bar);
+
+// const foo = obj.foo !== undefined ? obj.foo : 500;
+
+// const obj = {foo: null};
+
+// const { foo = 123 } = obj;
+// console.log(foo);
+
+type Obj = { foo?: number };
+const obj1: Obj = {};
+const { foo = 500 } = obj1;
+
+type NestedObj = {
+  obj?: {
+    foo: number;
+  };
+};
+const nested1: NestedObj = {
+  obj: { foo: 123}
+};
+const nested2: NestedObj = {};
+
+const { obj: { foo: foo1 } = { foo: 500 } } = nested1;
+const { obj: { foo: foo2 } = { foo: 500 } } = nested2;
+console.log(foo1);
+console.log(foo2);
