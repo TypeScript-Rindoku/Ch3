@@ -163,11 +163,39 @@ import { time } from "console";
 // d.setFullYear(2030);
 // console.log(d);
 
-const date = new Date("2020-02-03T15:00:00+09:00");
-const timeNum = date.getTime();
-console.log(timeNum);
+// const date = new Date("2020-02-03T15:00:00+09:00");
+// const timeNum = date.getTime();
+// console.log(timeNum);
 
-const date2 = new Date(timeNum);
-console.log(date2.toString());
+// const date2 = new Date(timeNum);
+// console.log(date2.toString());
 
 // console.log(Date.now());
+
+// const r = /ab+c/;
+
+// console.log(r.test("abbbbc"));
+// console.log(r.test("Hello, abc world!"));
+// console.log(r.test("ABC"));
+// console.log(r.test("こんにちは"));
+
+// const r = /abc/y;
+
+// r.lastIndex = 5;
+// console.log(r.test("xxxabcdefg"));
+// console.log(r.test("Hello, abcdefg"));
+
+// console.log("Hello, abbbbbbbc world! abbc".replace(/ab+c/, "foobar"))
+// console.log("Hello, abbbbbbbc world! abbc".replace(/ab+c/g, "foobar"))
+
+// const result = "Hello, abbbbbbbc world! abc".match(/a(b+)c/g);
+// console.log(result);
+// if (result !== null) {
+//   console.log(result[0]);
+//   console.log(result[1]);
+// }
+
+const result = "Hello, abbbbbbbc world! abc".match(/a(?<worldName>b+)c/);
+if (result !== null) {
+  console.log(result.groups);
+}
