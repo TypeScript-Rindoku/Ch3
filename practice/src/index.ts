@@ -195,7 +195,35 @@ import { time } from "console";
 //   console.log(result[1]);
 // }
 
-const result = "Hello, abbbbbbbc world! abc".match(/a(?<worldName>b+)c/);
-if (result !== null) {
-  console.log(result.groups);
-}
+// const result = "Hello, abbbbbbbc world! abc".match(/a(?<worldName>b+)c/);
+// if (result !== null) {
+//   console.log(result.groups);
+// }
+
+// const map: Map<string, number> = new Map();
+// map.set("foo", 1234);
+
+// console.log(map.get("foo"));
+// console.log(map.get("bar"));
+
+// console.log(map.has("foo"));
+// console.log(map.has("bar"));
+
+// const set: Set<number> = new Set();
+// set.add(1);
+// set.add(2);
+// set.add(3);
+
+// console.log(set);
+
+// const str = "Hello, world!";
+// console.log(str.length);
+
+// type HasLength = { length: number };
+// const obj: HasLength = "foobar";
+
+// let val: {} = 123;
+// val = "foobar";
+// val = {num: 1234 };
+// val = null;
+// val = undefined;
