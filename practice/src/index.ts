@@ -240,13 +240,45 @@ John Smith,17,0
 Mary Sue,14,1
 `;
 
-const users: Array<User> = [];
-const data2 = data.split('\n').slice(1,-1)
-const data3 = data2.map((u,i) => u.split(","))
+// const users: Array<User> = [];
+// const data2 = data.split('\n').slice(1,-1)
+// const data3 = data2.map((u,i) => u.split(","))
 
-for (const d of data3) {
-  users.push({ name: d[0], age: Number(d[1]), premiumUser: Boolean(Number(d[2])) })
-}
+// for (const d of data3) {
+//   users.push({ name: d[0], age: Number(d[1]), premiumUser: Boolean(Number(d[2])) })
+// }
+
+// 解答1
+// const users: User[] = [];
+
+// const lines = data.split("\n");
+// for (const line of lines) {
+//   if (line === "") {
+//     continue;
+//   }
+//   const [name, ageString, premiumUserString] = line.split(",");
+//   const age = Number(ageString);
+//   const premiumUser = premiumUserString === "1";
+
+//   users.push({
+//     name,
+//     age,
+//     premiumUser
+//   });
+// }
+
+// 解答2
+const users: User [] = data.split("\n")
+  .filter(line => line !== "")
+  .map(line => {
+    const [name, ageString, premiumUserString] = line.split(",");
+
+    return {
+      name,
+      age: Number(ageString),
+      premiumUser: premiumUserString === "1"
+    };
+  });
 
 for (const user of users) {
   if (user.premiumUser) {
