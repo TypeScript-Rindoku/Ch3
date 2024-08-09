@@ -227,3 +227,32 @@ import { time } from "console";
 // val = {num: 1234 };
 // val = null;
 // val = undefined;
+
+type User = {
+  name: string;
+  age: number;
+  premiumUser: boolean;
+}
+
+const data: string = `
+uhyo,26,1
+John Smith,17,0
+Mary Sue,14,1
+`;
+
+const users: Array<User> = [];
+const data2 = data.split('\n').slice(1,-1)
+const data3 = data2.map((u,i) => u.split(","))
+
+for (const d of data3) {
+  users.push({ name: d[0], age: Number(d[1]), premiumUser: Boolean(Number(d[2])) })
+}
+
+for (const user of users) {
+  if (user.premiumUser) {
+    console.log(`${user.name} (${user.age})はプレミアムユーザーです。`);
+  } else {
+    console.log(`${user.name} (${user.age})はプレミアムユーザーではありません。`);
+  }
+  }
+
